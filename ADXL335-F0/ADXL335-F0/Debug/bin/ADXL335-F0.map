@@ -1073,17 +1073,17 @@ OUTPUT(ADXL335-F0.elf elf32-littlearm)
  .debug_ranges  0x000004c8       0x70 ..\obj\stm32f0xx_gpio.o
  .debug_ranges  0x00000538       0x50 ..\obj\syscalls.o
 
-.debug_line     0x00000000     0x2343
+.debug_line     0x00000000     0x2345
  .debug_line    0x00000000      0x587 ..\obj\stm32f0xx_rcc.o
  .debug_line    0x00000587      0x49a ..\obj\stm32f0xx_adc.o
  .debug_line    0x00000a21      0x509 ..\obj\GFXC.o
  .debug_line    0x00000f2a      0x3bb ..\obj\ILI9163.o
- .debug_line    0x000012e5      0x3a3 ..\obj\main.o
- .debug_line    0x00001688       0xd7 ..\obj\startup_stm32f0xx.o
- .debug_line    0x0000175f      0x4fe ..\obj\stm32f0xx_spi.o
- .debug_line    0x00001c5d      0x1e5 ..\obj\system_stm32f0xx_temp.o
- .debug_line    0x00001e42      0x362 ..\obj\stm32f0xx_gpio.o
- .debug_line    0x000021a4      0x19f ..\obj\syscalls.o
+ .debug_line    0x000012e5      0x3a5 ..\obj\main.o
+ .debug_line    0x0000168a       0xd7 ..\obj\startup_stm32f0xx.o
+ .debug_line    0x00001761      0x4fe ..\obj\stm32f0xx_spi.o
+ .debug_line    0x00001c5f      0x1e5 ..\obj\system_stm32f0xx_temp.o
+ .debug_line    0x00001e44      0x362 ..\obj\stm32f0xx_gpio.o
+ .debug_line    0x000021a6      0x19f ..\obj\syscalls.o
 
 .debug_str      0x00000000     0x1bc9
  .debug_str     0x00000000      0x6a9 ..\obj\stm32f0xx_rcc.o

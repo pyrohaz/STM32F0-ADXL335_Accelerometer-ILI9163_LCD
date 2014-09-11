@@ -97,30 +97,30 @@ int main(void)
 
 
 		//Print X, Y and Z raw values to the LCD
-		XPos = PStr("XRaw: ", 0, 0, 1, Black, White);
-		PNum(Xre, XPos, 0, 0, 1, Black, White);
+		XPos = PStr("XRaw: ", 0, 0, 0, Black, White);
+		PNum(Xre, XPos, 0, 0, 0, Black, White);
 
-		XPos = PStr("YRaw: ", 0, 16, 1, Black, White);
-		PNum(Yre, XPos, 16, 0, 1, Black, White);
+		XPos = PStr("YRaw: ", 0, 8, 0, Black, White);
+		PNum(Yre, XPos, 8, 0, 0, Black, White);
 
-		XPos = PStr("ZRaw: ", 0, 32, 1, Black, White);
-		PNum(Zre, XPos, 32, 0, 1, Black, White);
+		XPos = PStr("ZRaw: ", 0, 16, 0, Black, White);
+		PNum(Zre, XPos, 16, 0, 0, Black, White);
 
 		//Print minimum and maximum values read
-		XPos = PStr("XMax: ", 0, 48, 0, Black, White);
-		XPos = PNum(XMx, XPos, 48, 0, 0, Black, White);
-		XPos = PStr(" XMin: ", XPos, 48, 0, Black, White);
-		XPos = PNum(XMn, XPos, 48, 0, 0, Black, White);
+		XPos = PStr("XMax: ", 0, 32, 0, Black, White);
+		XPos = PNum(XMx, XPos, 32, 0, 0, Black, White);
+		XPos = PStr(" XMin: ", XPos, 32, 0, Black, White);
+		XPos = PNum(XMn, XPos, 32, 0, 0, Black, White);
 
-		XPos = PStr("YMax: ", 0, 56, 0, Black, White);
-		XPos = PNum(YMx, XPos, 56, 0, 0, Black, White);
-		XPos = PStr(" YMin: ", XPos, 56, 0, Black, White);
-		XPos = PNum(YMn, XPos, 56, 0, 0, Black, White);
+		XPos = PStr("YMax: ", 0, 40, 0, Black, White);
+		XPos = PNum(YMx, XPos, 40, 0, 0, Black, White);
+		XPos = PStr(" YMin: ", XPos, 40, 0, Black, White);
+		XPos = PNum(YMn, XPos, 40, 0, 0, Black, White);
 
-		XPos = PStr("ZMax: ", 0, 64, 0, Black, White);
-		XPos = PNum(ZMx, XPos, 64, 0, 0, Black, White);
-		XPos = PStr(" ZMin: ", XPos, 64, 0, Black, White);
-		XPos = PNum(ZMn, XPos, 64, 0, 0, Black, White);
+		XPos = PStr("ZMax: ", 0, 48, 0, Black, White);
+		XPos = PNum(ZMx, XPos, 48, 0, 0, Black, White);
+		XPos = PStr(" ZMin: ", XPos, 48, 0, Black, White);
+		XPos = PNum(ZMn, XPos, 48, 0, 0, Black, White);
 
 		//Normalize the readings! This formula only works
 		//after the device has been calibrated - which is
@@ -135,14 +135,14 @@ int main(void)
 		Z = (float)(Zre-ZMn)/(ZMx-ZMn);
 
 		//Print normalized values to screen
-		XPos = PStr("XNrm: ", 0, 72, 1, Black, White);
-		PNumF(X, XPos, 72, 2, 1, Black, White);
+		XPos = PStr("XNrm: ", 0, 72, 0, Black, White);
+		PNumF(X, XPos, 72, 2, 0, Black, White);
 
-		XPos = PStr("YNrm: ", 0, 88, 1, Black, White);
-		PNumF(Y, XPos, 88, 2, 1, Black, White);
+		XPos = PStr("YNrm: ", 0, 80, 0, Black, White);
+		PNumF(Y, XPos, 80, 2, 0, Black, White);
 
-		XPos = PStr("ZNrm: ", 0, 104, 1, Black, White);
-		PNumF(Z, XPos, 104, 2, 1, Black, White);
+		XPos = PStr("ZNrm: ", 0, 88, 0, Black, White);
+		PNumF(Z, XPos, 88, 2, 0, Black, White);
 
 	}
 }

@@ -19,8 +19,8 @@
       <target file="stm32f0xx_adc.o" lastModified="14864fe30cb">
          <source file="..\..\..\stm32_lib\src\stm32f0xx_adc.c" lastModified="148312bcac1"/>
       </target>
-      <target file="main.o" lastModified="1486505699b">
-         <source file="..\..\..\main.c" lastModified="1486503a808"/>
+      <target file="main.o" lastModified="14865273fdc">
+         <source file="..\..\..\main.c" lastModified="14865273a4d"/>
       </target>
       <target file="startup_stm32f0xx.o" lastModified="14864fe36cd">
          <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="148312bcb52"/>
