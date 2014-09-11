@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\ADXL335-F0\stm32_lib -I..\..\..\workspace\ADXL335-F0\stm32_lib\inc -I..\..\..\workspace\ADXL335-F0\cmsis_core -I..\..\..\workspace -I..\..\..\workspace\ADXL335-F0 -I..\..\.. -I..\..\..\workspace\ADXL335-F0\cmsis_boot">
+      <target file="stm32f0xx_spi.o" lastModified="14864d0b70f">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_spi.c" lastModified="14864d0a33a"/>
+      </target>
+      <target file="GFXC.o" lastModified="14864d0b369">
+         <source file="..\..\..\GFXC.c" lastModified="14808df705c"/>
+      </target>
+      <target file="stm32f0xx_gpio.o" lastModified="14864d0779d">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="148312bcb08"/>
+      </target>
+      <target file="stm32f0xx_rcc.o" lastModified="14864d0718f">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="148312bcb36"/>
+      </target>
+      <target file="stm32f0xx_adc.o" lastModified="14864d072bc">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_adc.c" lastModified="148312bcac1"/>
+      </target>
+      <target file="main.o" lastModified="14864d2dfd0">
+         <source file="..\..\..\main.c" lastModified="14864d2cd44"/>
+      </target>
+      <target file="startup_stm32f0xx.o" lastModified="14864d0755d">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="148312bcb52"/>
+      </target>
+      <target file="system_stm32f0xx_temp.o" lastModified="14864d07670">
+         <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="148312bcb6f"/>
+      </target>
+      <target file="ILI9163.o" lastModified="14864d465ff">
+         <source file="..\..\..\ILI9163.c" lastModified="14864d46139"/>
+      </target>
+   </processor>
+</history>
