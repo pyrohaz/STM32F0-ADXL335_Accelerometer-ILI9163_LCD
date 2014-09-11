@@ -1,16 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="4.4.1 -mcpu=cortex-m0 -mthumb -g -nostartfiles -Map=ADXL335-F0.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\ADXL335-F0 -TC:\CooCox\CoIDE\configuration\ProgramData\ADXL335-F0/arm-gcc-link.ld -g">
-      <target file="ADXL335-F0.elf" lastModified="14864d469a3">
-         <source file="..\obj\stm32f0xx_rcc.o" lastModified="14864d0718f"/>
-         <source file="..\obj\stm32f0xx_adc.o" lastModified="14864d072bc"/>
-         <source file="..\obj\GFXC.o" lastModified="14864d0b369"/>
-         <source file="..\obj\ILI9163.o" lastModified="14864d465ff"/>
-         <source file="..\obj\main.o" lastModified="14864d2dfd0"/>
-         <source file="..\obj\startup_stm32f0xx.o" lastModified="14864d0755d"/>
-         <source file="..\obj\stm32f0xx_spi.o" lastModified="14864d0b70f"/>
-         <source file="..\obj\system_stm32f0xx_temp.o" lastModified="14864d07670"/>
-         <source file="..\obj\stm32f0xx_gpio.o" lastModified="14864d0779d"/>
+   <processor signature="4.4.1 -mcpu=cortex-m0 -mthumb -g -nostartfiles -Map=ADXL335-F0.map -O0 --gc-sections -lm -lgcc -lc -LC:\CooCox\CoIDE\configuration\ProgramData\ADXL335-F0 -TC:\CooCox\CoIDE\configuration\ProgramData\ADXL335-F0/arm-gcc-link.ld -g">
+      <target file="ADXL335-F0.elf" lastModified="1486505f0d3">
+         <source file="..\obj\stm32f0xx_rcc.o" lastModified="14864fe2f6b"/>
+         <source file="..\obj\stm32f0xx_adc.o" lastModified="14864fe30cb"/>
+         <source file="..\obj\GFXC.o" lastModified="1486505682b"/>
+         <source file="..\obj\ILI9163.o" lastModified="14864fe3519"/>
+         <source file="..\obj\main.o" lastModified="1486505699b"/>
+         <source file="..\obj\startup_stm32f0xx.o" lastModified="14864fe36cd"/>
+         <source file="..\obj\stm32f0xx_spi.o" lastModified="14864fe3839"/>
+         <source file="..\obj\system_stm32f0xx_temp.o" lastModified="14864fe397a"/>
+         <source file="..\obj\stm32f0xx_gpio.o" lastModified="14864fe3acc"/>
+         <source file="..\obj\syscalls.o" lastModified="1486505ed0f"/>
       </target>
    </processor>
 </history>

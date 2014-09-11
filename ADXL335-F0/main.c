@@ -70,6 +70,14 @@ int main(void)
 	//Initialize accelerometer variables!
 	uint16_t Xre, Yre, Zre, XPos;
 
+	//Min and max variables
+	uint16_t XMx = 0, XMn = 0xFFFF;
+	uint16_t YMx = 0, YMn = 0xFFFF;
+	uint16_t ZMx = 0, ZMn = 0xFFFF;
+
+	//Normalized variables
+	float X, Y, Z;
+
 	while(1)
 	{
 		//Read each of the accelerometer outputs and store in
@@ -78,15 +86,63 @@ int main(void)
 		Yre = ADC_Read(A_YChan, ADC_SampleTime_71_5Cycles);
 		Zre = ADC_Read(A_ZChan, ADC_SampleTime_71_5Cycles);
 
+		if(Xre>XMx) XMx = Xre;
+		if(Xre<XMn) XMn = Xre;
+
+		if(Yre>YMx) YMx = Yre;
+		if(Yre<YMn) YMn = Yre;
+
+		if(Zre>ZMx) ZMx = Zre;
+		if(Zre<ZMn) ZMn = Zre;
+
+
 		//Print X, Y and Z raw values to the LCD
-		XPos = PStr("X: ", 0, 0, 1, Black, White);
+		XPos = PStr("XRaw: ", 0, 0, 1, Black, White);
 		PNum(Xre, XPos, 0, 0, 1, Black, White);
 
-		XPos = PStr("Y: ", 0, 16, 1, Black, White);
+		XPos = PStr("YRaw: ", 0, 16, 1, Black, White);
 		PNum(Yre, XPos, 16, 0, 1, Black, White);
 
-		XPos = PStr("Z: ", 0, 32, 1, Black, White);
+		XPos = PStr("ZRaw: ", 0, 32, 1, Black, White);
 		PNum(Zre, XPos, 32, 0, 1, Black, White);
+
+		//Print minimum and maximum values read
+		XPos = PStr("XMax: ", 0, 48, 0, Black, White);
+		XPos = PNum(XMx, XPos, 48, 0, 0, Black, White);
+		XPos = PStr(" XMin: ", XPos, 48, 0, Black, White);
+		XPos = PNum(XMn, XPos, 48, 0, 0, Black, White);
+
+		XPos = PStr("YMax: ", 0, 56, 0, Black, White);
+		XPos = PNum(YMx, XPos, 56, 0, 0, Black, White);
+		XPos = PStr(" YMin: ", XPos, 56, 0, Black, White);
+		XPos = PNum(YMn, XPos, 56, 0, 0, Black, White);
+
+		XPos = PStr("ZMax: ", 0, 64, 0, Black, White);
+		XPos = PNum(ZMx, XPos, 64, 0, 0, Black, White);
+		XPos = PStr(" ZMin: ", XPos, 64, 0, Black, White);
+		XPos = PNum(ZMn, XPos, 64, 0, 0, Black, White);
+
+		//Normalize the readings! This formula only works
+		//after the device has been calibrated - which is
+		//done by placing all 3 of the dimensions relative
+		//to earth to get the max and min values. You need
+		//to do 6 different reads, X+, X-, Y+, Y-, Z+ and Z-
+		//to fully complete the calibration! Because the LCD
+		//writes take a long time, ensure the accelerometer
+		//is kept in that position for a fairly long duration.
+		X = (float)(Xre-XMn)/(XMx-XMn);
+		Y = (float)(Yre-YMn)/(YMx-YMn);
+		Z = (float)(Zre-ZMn)/(ZMx-ZMn);
+
+		//Print normalized values to screen
+		XPos = PStr("XNrm: ", 0, 72, 1, Black, White);
+		PNumF(X, XPos, 72, 2, 1, Black, White);
+
+		XPos = PStr("YNrm: ", 0, 88, 1, Black, White);
+		PNumF(Y, XPos, 88, 2, 1, Black, White);
+
+		XPos = PStr("ZNrm: ", 0, 104, 1, Black, White);
+		PNumF(Z, XPos, 104, 2, 1, Black, White);
 
 	}
 }

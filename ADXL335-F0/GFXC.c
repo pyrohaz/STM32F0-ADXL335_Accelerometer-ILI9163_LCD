@@ -254,7 +254,7 @@ int16_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec, uint8_t Size, Colou
 		XPos = PChar(NBuf[SCnt], XPos, Y, Size, Col, BKCol);
 	}
 
-	return X+Len*(5*(Size+1)+LetterSpace);
+	return XPos;
 }
 
 uint8_t Circle(uint8_t XS, uint8_t YS, uint8_t R, Colours8 Col){
